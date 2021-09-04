@@ -1,8 +1,12 @@
 <template>
-  <b-row class="about">  
+  <b-row class="about">
+    <!-- <Banner :showBtn='false' bodyText='MTOP was founded around a group of researchers from the Medical College of Wisconsin, University of Wisconsin-Milwaukee, Marquette University, and the Milwaukee VA. This team’s expertise spans neurobiological, cognitive, behavioral, social, and intervention science. The current core membership provides a strong foundation in neurobiological and psychological mechanisms that predict risk and resilience in the aftermath of trauma, validated interventions for post traumatic stress, socio-environmental influences on trauma outcomes, and affect dysregulation in post traumatic stress conditions.' />     -->
     <h5>Our Vision</h5>
-    <p>A world/community prepared to prevent exposure to trauma and minimize the adverse impact for those affected.</p>
-
+    <ul>
+      <ListItem
+      text='A world/community prepared to prevent exposure to trauma and minimize the adverse impact for those affected.'
+      />
+    </ul>
     <h5 >Our Mission</h5>
     <ul>
       <ListItem 
@@ -35,11 +39,13 @@
 
 <script>
 import ListItem from '@/components/ListItem'
+// import Banner from '@/components/Banner'
 
 export default {
   name:'about',
   components: {
-    ListItem,
+    ListItem
+    // Banner
   }  
 }
 </script>

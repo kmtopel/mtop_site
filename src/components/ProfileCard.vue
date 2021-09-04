@@ -12,10 +12,6 @@
             <b-row>
                 <b-img thumbnail rounded  :src='image'></b-img>    
             </b-row>
-            <b-row>
-                
-            </b-row>
-            
         </b-card-body> 
     </b-card>
   </b-link>

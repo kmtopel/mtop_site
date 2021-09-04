@@ -2,17 +2,37 @@
   <b-container fluid id="app">
     <b-row>
       <b-col>
-        <b-img src="./assets/logo.png"></b-img>
+        <b-img fluid src="./assets/logo.png"></b-img>
       </b-col>
     </b-row>
     <b-nav justified >
-      <b-nav-item to='/' active>Home</b-nav-item>
-      <b-nav-item to='/about'>About</b-nav-item>
-      <b-nav-item to='/people'>People</b-nav-item>
+      <NavBtn url='/' text='Home' />
+      <NavBtn url='/about' text='About' />
+      <NavBtn url='/people' text='People' />
     </b-nav>
     <router-view/>
+    <b-navbar variant="light" class='mt-3'>
+      <b-container>
+        <b-row>
+          <b-col>
+            <p>Copyright 2021</p>
+          </b-col>
+        </b-row>
+      </b-container>
+    </b-navbar>
   </b-container>
 </template>
+
+<script>
+import NavBtn from '@/components/NavBtn'
+
+export default {
+  name: "app",
+  components: {
+    NavBtn,
+  }
+}
+</script>
 
 <style lang="scss">
 

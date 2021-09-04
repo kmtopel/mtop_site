@@ -1,10 +1,31 @@
 <template>
     <b-row>
         <div v-for='person in people' :key='person.url'>
-            <b-card border-variant="0" v-if='person.url === id' :title='person.name' :sub-title='person.role'>
-                <b-img rounded  style="max-width: 50rem;"  :src="person.image" alt=""></b-img>
-                <b-card-text>{{person.about}}</b-card-text>
-                <router-link to='/people'>Back</router-link>
+            <b-card border-variant="0" v-if='person.url === id'>
+                <b-container>
+                    
+                    <b-row>
+                        <b-col cols='3'></b-col>
+                        <b-col cols='6'>
+                            <b-img fluid-grow rounded :src="person.image" alt=""></b-img>
+                        </b-col>
+                        <b-col cols='3'></b-col>
+                    </b-row>
+                    <b-row>
+                        <h4>{{person.name}}</h4>
+                    </b-row>
+                      <b-row>
+                        <h6>{{person.role}}</h6>
+                    </b-row>
+                    <b-row>
+                         <b-col cols='12'>
+                            <b-card-text>{{person.about}}</b-card-text>
+                        </b-col>
+                    </b-row>
+                    <b-row>
+                        <router-link to='/people'>Back</router-link>
+                    </b-row>
+                </b-container>
             </b-card>
         </div>
     </b-row>
